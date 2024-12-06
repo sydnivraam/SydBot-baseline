@@ -53,5 +53,12 @@ setx OPENAI_API_KEY 'enter your secret key here'
 ```
 This will allow the chatbot to access the OpenAI API. You may need to pay in order for access to the API to succeed when making calls, though that gpt-4o-mini is arguably cheap when just doing text prompts.
 
+### Running The Bot
+To run the bot on Windows, right-click the directory that houses all of the files (bot.js, audio_player.py, /audio/ folder, etc.) and click "Open in Terminal".
+Next, simply type in the following:
+```
+node bot.js
+```
+Hit the Enter button and, voila, your bot is now monitoring your Twitch channel's chat messages and will respond accordingly!
 
-Have fun.
+Have fun!
