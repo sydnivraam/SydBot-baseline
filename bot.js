@@ -128,6 +128,16 @@ function handleWebSocketMessage(data) {
 						});
 					}
 
+					// Chat message triggering
+					// AGAIN, ALL TRIGGERS DEFINED IN THE FILE SHOULD BE LOWERCASE!
+					else if (currentMessage == "!commands") { // Check if the chat message is a command
+						sendChatMessage("Check out currently available commands at https://www.twitch.tv/YourBotChannel/about"); // Send the associated message
+					}
+
+					else if (currentMessage == "!hyped") { // Check if the chat message is a command
+						sendChatMessage("TwitchConHYPE"); // Send the associated message
+					}
+
 					// Audio triggering
 					else if (currentMessage.startsWith("!")) { // check that message starts with trigger symbol to avoid running the for loop when not necessary
 						for (var audioObj of myAudio) {
@@ -140,16 +150,6 @@ function handleWebSocketMessage(data) {
 								}
 							}
 						}
-					}
-
-					// Chat message triggering
-					// AGAIN, ALL TRIGGERS DEFINED IN THE FILE SHOULD BE LOWERCASE!
-					else if (currentMessage == "!commands") { // Check if the chat message is a command
-						sendChatMessage("Check out currently available commands at https://www.twitch.tv/YourBotChannel/about"); // Send the associated message
-					}
-
-					else if (currentMessage == "!hyped") { // Check if the chat message is a command
-						sendChatMessage("TwitchConHYPE"); // Send the associated message
 					}
 
 					break;
