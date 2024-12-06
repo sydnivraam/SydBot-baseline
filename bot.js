@@ -50,7 +50,7 @@ fs.writeFile("AUDIOTRIGGEROUTPUT.txt", triggerData, (err) => {
 // OPENAI TRIGGER
 // Define the phrase that will trigger OpenAI with a trailing space
 // TRIGGER SHOULD BE LOWERCASE
-const openaiTrigger = "!openai";
+const openaiTrigger = "!openai ";
 // The length of the trigger will determine which part of the chat message is sent to OpenAI
 const triggerLength = openaiTrigger.length;
 
