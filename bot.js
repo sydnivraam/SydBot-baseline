@@ -140,7 +140,7 @@ function handleWebSocketMessage(data) {
 
 					// Audio triggering
 					else if (currentMessage.startsWith("!")) { // check that message starts with trigger symbol to avoid running the for loop when not necessary
-						for (var audioObj of myAudio) {
+						for (var audioObj of myAudio) { // iterate through myAudio array to check if currentMessage matches any triggers
 							if (currentMessage == audioObj.trigger) { // check that message matches a trigger listed in myAudio array
 								PythonShell.run('audio_player.py', {
 									args: [audioObj.mp3] // play the associated .mp3 file name when current message matches the associated trigger
