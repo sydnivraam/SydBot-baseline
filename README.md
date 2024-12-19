@@ -43,7 +43,9 @@ Audio files should be placed in the audio/ folder and ideally be .mp3 format. No
 Playing audio files now utilizes Python's playsound module which alleviates the issue of the operating system's default media player interrupting gameplay when it would play a new audio file. Playsound now allows audio files to play in the background and does not interrupt gameplay. To ensure playsound will work properly, make sure your pip version is the most recent and install the playsound module oon your operating system.
 ```
 python -m pip install --upgrade pip
+```
 
+```
 pip install playsound
 ```
 
