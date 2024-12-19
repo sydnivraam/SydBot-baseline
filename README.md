@@ -38,9 +38,14 @@ https://id.twitch.tv/oauth2/authorize
 The page will not load as a valid page, but you will be able to locate the token within your browser's address bar.
 
 ### Playing Audio Files
-Audio files should be placed in the audio/ folder and ideally be .mp3 format. Note that these files will be played through your system's default media player. This could cause the media to jump to the foreground and interrupt gameplay, but I find this is not an issue when the media player is running in a second screen. I will consider looking into the pygame module in the future as I believe this can be used to play audio files as background processes but I'm satisfied with the current state running the system's media player for the time being.
+Audio files should be placed in the audio/ folder and ideally be .mp3 format. Note that you will need to keep track of your audio file's exact names and enter them into the bot.js code accordingly in order to avoid crashes.
 
-Note that you will need to keep track of your audio file's exact names and enter them into the bot.js code accordingly in order to avoid crashes.
+Playing audio files now utilizes Python's playsound module which alleviates the issue of the operating system's default media player interrupting gameplay when it would play a new audio file. Playsound now allows audio files to play in the background and does not interrupt gameplay. To ensure playsound will work properly, make sure your pip version is the most recent and install the playsound module oon your operating system.
+```
+python -m pip install --upgrade pip
+
+pip install playsound
+```
 
 ### OpenAI Integration
 You will need to create an OpenAI account if attempting to use the ChatBot with it.
