@@ -52,7 +52,7 @@ You will need to create an OpenAI account if attempting to use the ChatBot with 
 
 You will then need to go retrieve a secret key to access the API via OpenAI at https://platform.openai.com/api-keys
 
-Subsequently, go into the console within the ChatBot directory and enter the following:
+Subsequently, right-click the directory that houses all of the files (bot.js, audio_player.py, /audio/ folder, etc.), click "Open in Terminal" and enter the following:
 ```
 setx OPENAI_API_KEY 'enter your secret key here'
 ```
